@@ -1,0 +1,528 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilory';
+}
+body{
+    height: 100%;
+    width: 100%;
+    
+}
+.main{
+    position: relative;
+    z-index: 10;
+}
+#page1{
+   min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+nav{
+    padding: 2vw 0vw;
+    width: 100%;
+    background-color: #EFEAE3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.nav-part2 h4 {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-weight: 500;
+    position: relative;
+    color: rgb(30, 30, 30);
+    font-size: 18px;
+    overflow: hidden; /* Ensures smooth animation within bounds */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-part2 h4::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: bottom 0.4s ease, border-radius 0.4s ease;
+    z-index: 1;
+}
+
+.nav-part2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+.nav-part2 h4:hover {
+    color: white;
+    transform: scale(1.1); /* Adds a scaling effect on hover */
+}
+
+.nav-part2 h4 a {
+    text-decoration: none;
+    color: rgb(30, 30, 30);
+    position: relative;
+    z-index: 2; /* Ensures the text stays above the background */
+}
+.nav-part2 h4:hover a {
+    color: white; /* Changes the anchor tag color to white on hover */
+}
+.center{
+    height: 75vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(50, 47, 47);
+    padding-bottom: 7vw;
+}
+.left{
+    width: 25vw;
+    font-size: 1.8vw;
+    font-family: 'Gilroy';
+    line-height: 2vw;
+}
+.center h1{
+    font-size: 7vw;
+    line-height: 8vw;
+    text-align: right;
+}
+#page1 video{
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 4vw;
+    position: relative;
+    overflow: hidden;
+   
+}
+#hero-shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    background-color: #FE330C;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    right: 0;
+    top:75vh;
+    filter: blur(20px);
+    
+}
+.hero1, .hero2, .hero3 {
+    position: absolute;
+    width: 40vw; /* Adjust size as needed */
+    height: 36vw; /* Adjust size as needed */
+    border-radius: 50%; /* Makes them circular */
+    background-color:#FE330C ; /* Semi-transparent white */
+    animation: moveHero 5s infinite alternate ease-in-out;
+    overflow: hidden; /* Ensures smooth animation within bounds */
+}
+
+.hero1 {
+    top: 10%;
+    left: -5%;
+    animation-delay: 0s; /* Starts immediately */
+}
+
+.hero2 {
+    top: 10%;
+    left: -10%;
+    animation-delay: 1s; /* Delays the start by 1 second */
+}
+
+.hero3 {
+    top: 30%;
+    left: -20%;
+    animation-delay: 2s; /* Delays the start by 2 seconds */
+}
+
+@keyframes moveHero {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(50px, -50px) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50px, 50px) scale(1);
+        opacity: 1;
+    }
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 6vw 0vw;
+}
+.moving-text{
+    background-color: #EFEAE3;
+}
+.moving-text h1{
+    font-size: 7vw;
+    display:inline-block
+    
+}
+.gola{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #FE330C;
+    display: inline-block;
+    margin: 0vw 2vw;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.moving-text::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for webkit browsers */
+}
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+        
+    }
+}
+.page2-bottom{
+    height: 100vh;
+    width: 100%;
+    background-color:#EFEAE3;
+    padding: 4vw 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: visible;
+   
+  
+}
+.page2-bottom h1{
+    font-size: 3.5vw;
+    width: 50%;
+    
+}
+.bottom-part2{
+    width: 25%;
+    
+}
+.page2-bottom img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.page2-bottom img:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+.page2-bottom h1:hover{
+    color: #FE330C;
+    transition: all 0.3s ease-in-out;
+}
+.page2-bottom p{
+    font-size: 1.3vw;
+    
+    margin-top: 2vw;
+    color: rgb(50, 47, 47);
+}
+
+
+.page2-bottom .animated-shape {
+    position: absolute;
+    width: 22vw; /* Adjust size as needed */
+    height: 22vw; /* Adjust size as needed */
+    border-radius: 50%; /* Makes them circular */
+    background-color: #FE330C; /* Semi-transparent red */
+    animation: moveShape 6s infinite alternate ease-in-out;
+    filter: blur(30px); /* Adds a blur effect */
+}
+
+.page2-bottom .shape1 {
+    top: 60%;
+    left: 28%;
+    animation-delay: 0s; /* Starts immediately */
+}
+
+.page2-bottom .shape2 {
+    top: 60%;
+    left: 33%;
+    animation-delay: 1s; /* Delays the start by 1 second */
+}
+
+.page2-bottom .shape3 {
+    top: 60%;
+    left: 35%;
+    animation-delay: 2s; /* Delays the start by 2 seconds */
+}
+
+@keyframes moveShape {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(30px, -30px) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-30px, 30px) scale(1);
+        opacity: 1;
+    }
+}
+.page3{
+    height: 100%;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    overflow: visible;
+    padding: 4vw 0vw;
+}
+.elem{
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 2vw;
+}
+.elem h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color:orange;
+    position: absolute;
+    left: 0;
+    top:-100%
+}
+.elem:hover .overlay{
+    top: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.fixed-image{
+    height: 40vh;
+    width: 15vw;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    left:50%;
+    top: 30%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+.page4{
+    height: 100%;
+    width: 100%;
+    background-color: #EFEAE3;
+    display: flex;
+    padding: 4vw;
+    margin: 0;
+}
+.last-left{
+ 
+    width: 50%;
+    background-color: black;
+    padding: 8vw 10vw;
+    border-radius: 20px;
+    height: 100%;
+    
+
+}
+.last-left h1{
+    font-size: 3vw;
+    margin-bottom: 2vw;
+    font-size: 4vw;
+    left: 40%;
+    top: 50%;
+    color: white;
+    cursor: pointer;
+    
+
+}
+.last-left h1:hover{
+    color: #FE330C;
+    transition: all 0.3s ease-in-out;
+}
+.last-left p{
+    font-size: 1.5vw;
+    line-height: 2vw;
+    color: rgb(94, 93, 93);
+}
+.last-right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.last-right img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.last-right img {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.last-left p {
+    transition: opacity 0.3s ease-in-out;
+}
+.page5{
+    width: 100%;
+    height: 60vh;
+    background-color: #EFEAE3;
+    
+}
+.page6{
+    width: 100%;
+    height: 100vh;
+}
+.bottom{
+    position: fixed;
+    z-index: 9;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    bottom: 0;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 1vw 3vw;
+    overflow: hidden;
+
+}
+.bottom h1{
+    font-size: 24vw;
+    
+}
+.footer-div{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4vw;
+}
+.footer-bottom{
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4vw;
+}
+.footer-left{
+    width: 50%;
+  
+}
+.footer-left h2{
+    font-size: 2vw;
+    color: white;
+    margin-bottom: 1vw;
+    position: relative;
+}
+.footer-right{
+    width: 30%;
+    position: relative;
+}
+.footer-right p{
+    font-size: 1.5vw;
+    color: white;
+    margin-bottom: 1vw;
+}
+.mail{
+    height: 20px;
+    width: 20vw;
+    border-bottom: 1px solid white;
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+    color: #EFEAE3;
+}
+.animated-shape {
+    position: absolute;
+    width: 27vw;
+    height: 25vw;
+    border-radius: 50%;
+    background-color: #FE330C;
+    filter: blur(30px);
+    animation: moveBothSides 6s infinite alternate ease-in-out;
+}
+
+.shape-left1 {
+    top: -10%;
+    left: 0%;
+    animation-delay: 0s;
+}
+
+.shape-left2 {
+    top: -20%;
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.shape-right1 {
+    top: -10%;
+    right: 0%;
+    animation-delay: 0.5s;
+}
+
+.shape-right2 {
+    top: -20%;
+    right: 20%;
+    animation-delay: 1.5s;
+}
+/* Keyframes for Animation */
+@keyframes moveBothSides {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(30px, -30px) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-30px, 30px) scale(1);
+        opacity: 1;
+    }
+}
