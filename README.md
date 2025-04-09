@@ -25,3 +25,48 @@ SunDown is a multi-disciplinary studio website designed to showcase unique, end-
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/sundown-website.git
+sundown-website/
+├── [index.html](http://_vscodecontentref_/0)         # Main HTML file
+├── [style.css](http://_vscodecontentref_/1)          # CSS file for styling
+├── [script.js](http://_vscodecontentref_/2)          # JavaScript file for interactivity
+├── README.md          # Project documentation
+├── assets/            # Folder for images and other assets
+GitHub Copilot
+Here’s a README.md file for your project:
+
+Navigate to the project directory:
+Open index.html in your browser to view the website.
+File Structure
+How to Use
+1. Smooth Scrolling
+The smooth scrolling effect is powered by Locomotive Scroll. The main container is wrapped with the data-scroll-container attribute.
+
+2. Swiper Slider
+The Swiper slider is used to showcase projects. You can customize the slides in the swiper-wrapper section of the HTML.
+
+3. Dynamic Content Updates
+Clicking on headings in the "Our Expertise" section dynamically updates the image and text in the adjacent container.
+
+4. Responsive Design
+The website is fully responsive and adapts to different screen sizes using CSS media queries.
+
+Customization
+Add New Slides: Add new slides to the Swiper by appending new swiper-slide divs in the swiper-wrapper.
+Update Animations: Modify animations in the script.js file or update keyframes in the style.css file.
+Change Colors: Update the color scheme by modifying the CSS variables or directly editing the styles.
+Dependencies
+Locomotive Scroll
+Swiper.js
+GSAP
+License
+This project is licensed under the MIT License. You are free to use, modify, and distribute this project as per the license terms.
+
+Acknowledgments
+Unsplash for placeholder images.
+Swiper.js for the slider functionality.
+Locomotive Scroll for smooth scrolling.
+Contact
+For any inquiries or feedback, please contact:
+
+Email: your-email@example.com
+Website: SunDown Studio
