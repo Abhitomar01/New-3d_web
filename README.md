@@ -68,5 +68,5 @@ Locomotive Scroll for smooth scrolling.
 Contact
 For any inquiries or feedback, please contact:
 
-Email: your-email@example.com
+Email: tabhi1957@gmail.com
 Website: SunDown Studio
